@@ -120,7 +120,7 @@ function handleDelete(key) {
             />
             <TextInput
                 placeholder='Preço'
-                left={<TextInput.Icon icon="cash" />}
+                left={<TextInput.Icon icon="cash-multiple" />}
                 style={styles.input}
                 onChangeText={(texto) => setPreco(texto)}
                 value={preco}
@@ -128,7 +128,7 @@ function handleDelete(key) {
             />
             <TextInput
                 placeholder='Cor'
-                left={<TextInput.Icon icon="color" />}
+                left={<TextInput.Icon icon="palette" />}
                 style={styles.input}
                 onChangeText={(texto) => setCor(texto)}
                 value={cor}
@@ -147,10 +147,10 @@ function handleDelete(key) {
 
             {loading ? 
                 ( 
-                    <ActivityIndicator color="#121212" size={45} /> 
+                    <ActivityIndicator color="#fff" size={45} /> 
                 ) : 
                 ( 
-                    <FlatList 
+                    <FlatList color='fff'
                         keyExtractor={item => item.key} 
                         data={produtos} 
                         renderItem={({ item }) => ( 
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
         fontSize: 13,
         borderRadius: 8,
         marginBottom: 10,
-        backgroundColor: '#ede7d5',
+        backgroundColor: '#fff',
     },
 
     separator: {
@@ -222,5 +222,9 @@ const styles = StyleSheet.create({
     listar: {
         fontSize: 20,
         textAlign: 'center'
+    },
+
+    listagem: {
+        backgroundColor: '#fff'
     }
 });
